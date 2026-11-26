@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forge Fitness | Gym in Koramangala, Bengaluru</title>
+<meta name="description" content="Forge Fitness: strength training, group HIIT and personal coaching in Koramangala, Bengaluru. Book a free trial day.">
+<meta property="og:title" content="Forge Fitness | Gym in Koramangala, Bengaluru">
+<meta property="og:description" content="Strength training, group HIIT and personal coaching. Book a free trial day.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0B0C">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Forge Fitness","address":{"@type":"PostalAddress","streetAddress":"1st Floor, 100 Feet Road, Koramangala","addressLocality":"Bengaluru","addressRegion":"Karnataka","postalCode":"560034","addressCountry":"IN"},"openingHours":["Mo-Sa 05:00-22:00","Su 07:00-12:00"],"description":"Strength training, group HIIT and personal coaching in Koramangala, Bengaluru."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== BRAND COLORS ===== */
+  :root { --brand:#D90429; --brand-dark:#8D0801; --on-brand:#fff; --bg:#0B0B0C; --card:#161618; --line:#2a2a2e; --text:#F3F1EE; --muted:#9a9aa1;
+    /* ===== PHOTOS (Unsplash, free to use): swap any link inside url("...") ===== */
+    --hero-img: url("https://images.pexels.com/photos/30147878/pexels-photo-30147878.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    --img-strength: url("https://images.unsplash.com/photo-1620188467120-5042ed1eb5da?fm=jpg&q=70&w=800&auto=format&fit=crop");
+    --img-hiit: url("https://images.pexels.com/photos/6389506/pexels-photo-6389506.jpeg?auto=compress&cs=tinysrgb&w=800");
+    --img-coach: url("https://images.unsplash.com/photo-1761839258420-5c3e2f2e2a74?fm=jpg&q=70&w=800&auto=format&fit=crop");
+    --img-floor: url("https://images.pexels.com/photos/38872716/pexels-photo-38872716.jpeg?auto=compress&cs=tinysrgb&w=800");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px}
+  h1,h2,h3,.logo,.num{font-family:"Fraunces",Georgia,serif;font-weight:800;letter-spacing:-.01em;line-height:1.05}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+  .tag{color:var(--brand);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;display:block;margin-bottom:10px}
+  .btn{display:inline-block;background:var(--brand);color:var(--on-brand);text-decoration:none;font-weight:600;padding:14px 28px;border-radius:999px;border:2px solid var(--brand);transition:background .2s;cursor:pointer;font-size:1rem;font-family:inherit}
+  .btn:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+  .btn.ghost{background:transparent;border-color:#fff}
+  .btn.ghost:hover{background:#fff;color:#000}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-size:1.7rem;text-decoration:none}.logo span{color:var(--brand)}
+  nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  nav ul a{text-decoration:none;font-weight:500}nav ul a:hover{color:var(--brand)}
+  nav .btn{padding:8px 18px}nav .btn:hover{color:var(--on-brand)}
+  #menu-btn{display:none;background:none;border:0;color:var(--text);font-size:1.8rem;cursor:pointer}
+
+  .hero{position:relative;padding:70px 0 56px;background:linear-gradient(90deg,rgba(11,11,12,.96) 35%,rgba(11,11,12,.55)),var(--hero-img) center/cover,radial-gradient(circle at 85% 20%,var(--brand-dark),transparent 55%),var(--bg)}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+  .hero h1{font-size:clamp(3.4rem,10vw,7rem)}
+  .hero h1 em{font-style:normal;color:var(--brand);display:block}
+  .hero p{margin:20px 0 28px;max-width:44ch;color:#d0d0d5;font-size:1.15rem}
+  .stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
+  .stats .num{font-size:2.6rem;color:var(--text);display:block}
+  .stats small{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+
+  .trial-card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--brand);border-radius:12px;padding:26px}
+  .trial-card h2{font-size:1.9rem;margin-bottom:4px}
+  .trial-card p{margin:0 0 16px;font-size:.98rem;color:var(--muted)}
+  .trial-card label{display:block;font-size:.85rem;color:var(--muted);margin:10px 0 4px}
+  .trial-card input,.trial-card select{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#0B0B0C;color:#fff;font:inherit}
+  .trial-card .btn{width:100%;margin-top:18px;border-radius:8px}
+
+  .ticker{background:var(--brand);color:var(--on-brand);overflow:hidden;white-space:nowrap;padding:12px 0}
+  .ticker div{display:inline-block;animation:slide 28s linear infinite}
+  .ticker span{font-family:"Fraunces",Georgia,serif;text-transform:uppercase;letter-spacing:.06em;margin:0 22px;font-size:1.15rem}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  section{padding:80px 0}
+  section h2.big{font-size:clamp(2.3rem,5.5vw,3.6rem);margin-bottom:12px}
+  .lead{max-width:56ch;color:var(--muted);margin-bottom:38px}
+
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pcard{position:relative;min-height:300px;border-radius:12px;overflow:hidden;display:flex;align-items:flex-end;padding:22px;border:1px solid var(--line);background:linear-gradient(0deg,rgba(0,0,0,.85) 25%,rgba(0,0,0,.15)),var(--bg-img,none) center/cover,linear-gradient(160deg,var(--card),var(--brand-dark) 220%)}
+  .pcard h3{font-size:1.6rem;margin-bottom:6px}
+  .pcard p{color:#cfcfd4;font-size:.96rem}
+  .p1{--bg-img:var(--img-strength)}.p2{--bg-img:var(--img-hiit)}.p3{--bg-img:var(--img-coach)}.p4{--bg-img:var(--img-floor)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .step{border-left:3px solid var(--brand);padding-left:20px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:"Fraunces",Georgia,serif;font-size:3rem;color:var(--brand)}
+  .step h3{font-size:1.5rem;margin:4px 0 6px}.step p{color:var(--muted)}
+
+  .alt{background:#111113}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:30px 26px;display:flex;flex-direction:column}
+  .plan.pick{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+  .plan h3{font-size:1.5rem}
+  .price{font-family:"Fraunces",Georgia,serif;font-size:2.9rem;margin:10px 0 2px}.price small{font-family:"Barlow";font-size:1rem;color:var(--muted)}
+  .plan ul{list-style:none;margin:16px 0 24px;flex:1}.plan li{padding:6px 0;border-bottom:1px solid var(--line)}
+  .plan .btn{text-align:center}
+
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  blockquote{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;font-size:1.15rem}
+  blockquote footer{margin-top:12px;font-size:.92rem;color:var(--muted)}
+
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  summary{cursor:pointer;font-weight:600;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::after{content:"+";color:var(--brand);font-size:1.5rem;line-height:1}
+  details[open] summary::after{content:"\2212"}
+  details p{color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .contact dl{display:grid;grid-template-columns:90px 1fr;gap:14px 10px}
+  .contact dt{font-weight:600;color:var(--brand)}
+  .contact a{font-weight:600}
+  .map{background:linear-gradient(135deg,var(--card),var(--brand-dark) 250%);border:1px solid var(--line);border-radius:12px;padding:32px}
+  .map h3{font-size:2rem;margin-bottom:10px}.map p{color:#d0d0d5;margin-bottom:22px}
+
+  footer.site{background:#000;color:var(--muted);padding:36px 0;text-align:center;font-size:.95rem;border-top:1px solid var(--line)}
+  footer.site strong,footer.site a{color:#fff}
+  /* OPTIONAL credit line: uncomment the line in the footer below and add your name */
+
+  @media(max-width:860px){
+    #menu-btn{display:block}
+    nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:18px 20px 24px;gap:16px;align-items:flex-start;border-bottom:1px solid var(--line)}
+    nav ul.open{display:flex}
+    .hero .wrap,.contact .wrap,.quotes,.steps,.plans{grid-template-columns:1fr}
+    .grid4{grid-template-columns:1fr 1fr}
+    section{padding:56px 0}.hero{padding:44px 0 44px}
+  }
+  @media(max-width:520px){.grid4{grid-template-columns:1fr}.pcard{min-height:220px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--brand);color:var(--on-brand);padding:10px 16px;z-index:20}.skip:focus{left:8px;top:8px}
+  .icon{background:none;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+  nav ul a{color:var(--text)}nav .btn{color:var(--on-brand)}
+  [data-theme=light]{--brand:#D90429;--brand-dark:#8D0801;--on-brand:#fff;--bg:#F6F4F1;--card:#fff;--line:#dcd8d2;--text:#161618;--muted:#5a5a61}
+  [data-theme=light] nav{background:rgba(246,244,241,.94)}
+  [data-theme=light] .alt{background:#ECE9E4}
+  [data-theme=light] .hero{background:linear-gradient(90deg,rgba(246,244,241,.94) 35%,rgba(246,244,241,.55)),var(--hero-img) center/cover,var(--bg)}
+  [data-theme=light] .hero p,[data-theme=light] .map p{color:#3c3c42}
+  [data-theme=light] .trial-card input,[data-theme=light] .trial-card select,[data-theme=light] .map input,[data-theme=light] .map select,[data-theme=light] .bmi input{background:#fff;color:#161618}
+  [data-theme=light] footer.site{background:#161618}
+  .switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;margin-bottom:28px;overflow:hidden}
+  .switch button{background:none;border:0;color:var(--text);padding:10px 22px;font:inherit;cursor:pointer}
+  .switch button.on{background:var(--brand);color:var(--on-brand)}.switch small{opacity:.85}
+  .plan{position:relative;transition:transform .25s}.plan:hover,.trainer:hover,.pcard:hover{transform:translateY(-4px)}
+  .pcard{transition:transform .25s}
+  .badge{position:absolute;top:-13px;left:24px;background:var(--brand);color:var(--on-brand);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:999px}
+  .trainers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .trainer{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;transition:transform .25s}
+  .trainer h3{font-size:1.5rem;margin:14px 0 2px}.cert{color:var(--brand);font-weight:600;font-size:.92rem;margin-bottom:8px}
+  .trainer p:last-child{color:var(--muted)}
+  .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .avatar{overflow:hidden;width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-dark));display:grid;place-items:center;font-family:"Fraunces",Georgia,serif;font-size:1.7rem;color:var(--on-brand)}
+  .bmi{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+  .bmi label,.map label{display:block;font-size:.88rem;color:var(--muted);margin:10px 0 4px}
+  .bmi input,.map input,.map select{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+  .bmi .btn,.map .btn{margin-top:18px;border-radius:8px}
+  .bmi-out{font-size:1.05rem;min-height:84px;border-left:5px solid var(--line);padding-left:16px}
+  .bmi-out b{font-family:"Fraunces",Georgia,serif;font-size:2rem;font-weight:400;display:block}
+  #bmiChart{width:100%;max-width:340px;margin-top:14px}
+  .hist{list-style:none;color:var(--muted);font-size:.92rem;margin-top:8px}
+  .map input.bad,.bmi input.bad{border-color:#ff5a5f}
+  #cmsg{margin-top:12px;font-weight:600}#cmsg.ok{color:#2ecc71}#cmsg.err{color:#ff5a5f}
+  .gmap{width:100%;height:320px;border:0;border-radius:12px;filter:grayscale(.4)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
+  @media(max-width:860px){.trainers,.bmi{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.plan,.trainer,.pcard{transition:none}}
+
+  .hero{overflow:hidden}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(11,11,12,.93) 30%,rgba(11,11,12,.5))}
+  [data-theme=light] .hero::after{background:linear-gradient(90deg,rgba(246,244,241,.95) 30%,rgba(246,244,241,.6))}
+  .hero .wrap{position:relative;z-index:1}
+
+  .about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+  .about p{color:var(--muted);margin-bottom:14px;max-width:58ch}.about .mission{color:var(--text)}
+  .values{display:grid;gap:14px}
+  .value{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:10px;padding:18px 22px}
+  .value h3{font-size:1.35rem;margin-bottom:4px}.value p{color:var(--muted);margin:0}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .shot{padding:0;border:0;background:var(--card);border-radius:10px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .shot:hover img,.shot:focus-visible img{transform:scale(1.07)}
+  #lb{border:0;background:rgba(0,0,0,.92);width:100vw;height:100vh;max-width:none;max-height:none;padding:0;margin:0;color:#fff}
+  #lb[open]{display:grid;place-items:center}
+  #lb img{max-width:90vw;max-height:84vh;border-radius:8px}
+  #lb::backdrop{background:rgba(0,0,0,.92)}
+  .lbx,.lbn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:1.8rem;cursor:pointer}
+  .lbx{top:16px;right:16px}.lbn{top:50%;transform:translateY(-50%)}.lbp{left:14px}.lbnx{right:14px}
+  .quotes.three{grid-template-columns:repeat(3,1fr)}
+  .who{display:flex;gap:14px;align-items:center;margin-bottom:12px}.who small{color:var(--muted)}
+  .avatar.sm{width:52px;height:52px;font-size:1.15rem;flex:none}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .chips span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.82rem;color:var(--brand);font-weight:600}
+  blockquote p{font-size:1.05rem}
+  @media(max-width:860px){.about,.quotes.three{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  .wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s}
+  .wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#experience">Skip to content</a>
+<nav aria-label="Main"><div class="wrap">
+  <a href="#top" class="logo">FORGE<span>FIT</span></a>
+  <button id="menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <ul id="menu">
+    <li><a href="#top">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Services</a></li>
+    <li><a href="#plans">Memberships</a></li>
+    <li><a href="#trainers">Trainers</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button id="theme" class="icon" aria-label="Switch to light mode">&#9788;</button></li>
+    <li><a class="btn" href="#plans">Join Now</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top">
+<video class="hero-video" id="heroVideo" muted loop playsinline preload="none" aria-hidden="true" poster="https://images.pexels.com/videos/29532359/pexels-photo-29532359.jpeg?auto=compress&cs=tinysrgb&w=1200" data-src="https://videos.pexels.com/video-files/29532359/12712318_1440_2560_30fps.mp4"></video>
+<div class="wrap">
+  <div>
+    <h1>Stop guessing. <em>Start training.</em></h1>
+    <p>Certified coaches, a plan built around your week, and a community that pushes you. Try a full day free.</p>
+    <a class="btn" href="#trial">Start your free trial</a>
+    <div class="stats">
+      <div><span class="num" data-to="2000">0</span><small>Members</small></div>
+      <div><span class="num" data-to="15">0</span><small>Expert coaches</small></div>
+      <div><span class="num" data-to="500">0</span><small>Transformations</small></div>
+    </div>
+  </div>
+  <form class="trial-card" id="trial" onsubmit="return sendTrial(event)">
+    <h2>Book your free trial day</h2>
+    <p>One full day, one-time use per person.</p>
+    <label for="n">Full name</label><input id="n" required>
+    <label for="p">Phone number</label><input id="p" type="tel" required>
+    <label for="g">Goal</label>
+    <select id="g"><option>Build strength</option><option>Lose fat</option><option>Group HIIT</option><option>Personal coaching</option></select>
+    <label for="d">Preferred date</label><input id="d" type="date" required>
+    <button class="btn" type="submit">Book on WhatsApp</button>
+  </form>
+</div></header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Expert trainers</span><span>&bull;</span><span>Premium equipment</span><span>&bull;</span><span>Group HIIT</span><span>&bull;</span><span>Personal coaching</span><span>&bull;</span><span>Monthly body check</span><span>&bull;</span>
+  <span>Expert trainers</span><span>&bull;</span><span>Premium equipment</span><span>&bull;</span><span>Group HIIT</span><span>&bull;</span><span>Personal coaching</span><span>&bull;</span><span>Monthly body check</span><span>&bull;</span>
+</div></div>
+
+<section class="alt" id="about"><div class="wrap about">
+  <div class="reveal">
+    <span class="tag">/ Our story</span>
+    <h2 class="big">Built by people who needed a gym like this</h2>
+    <p>Forge Fitness started in 2019 with one floor, a handful of racks and a simple idea: a gym should feel welcoming on day one. Too many people quit because they felt lost or watched. So we hired coaches who teach, kept the floor uncrowded and built plans around real schedules.</p>
+    <p class="mission"><b>Our mission:</b> help every member get stronger, move better and stay consistent for the long run.</p>
+  </div>
+  <div class="values">
+    <div class="value reveal"><h3>Coach first</h3><p>Every member gets a trainer who knows their name and goals.</p></div>
+    <div class="value reveal"><h3>No judgement</h3><p>Beginners and regulars train side by side.</p></div>
+    <div class="value reveal"><h3>Honest results</h3><p>We track progress monthly and adjust your plan.</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <span class="tag">/ Premium experience</span>
+  <h2 class="big">Everything under one roof</h2>
+  <p class="lead">Forge Fitness is a neighbourhood gym for busy people who are serious about change. Train your way, with a coach who knows your name.</p>
+  <div class="grid4">
+    <div class="pcard reveal p1"><div><h3>Strength &amp; Conditioning</h3><p>Free weights, machines and guided programs.</p></div></div>
+    <div class="pcard reveal p2"><div><h3>Group HIIT</h3><p>45-minute classes, morning and evening, scaled for all levels.</p></div></div>
+    <div class="pcard reveal p3"><div><h3>Personal Coaching</h3><p>Custom plan, form checks and progress tracking.</p></div></div>
+    <div class="pcard reveal p4"><div><h3>Monthly Body Check</h3><p>Track weight, body fat and muscle to adjust your plan.</p></div></div>
+  </div>
+</div></section>
+
+<section class="alt" id="how"><div class="wrap">
+  <span class="tag">/ Join us today</span>
+  <h2 class="big">How it works</h2>
+  <p class="lead">Three steps from couch to first workout.</p>
+  <div class="steps">
+    <div class="step reveal"><h3>Book your trial</h3><p>Fill the form above or message us on WhatsApp.</p></div>
+    <div class="step reveal"><h3>Pick a plan</h3><p>Flexible plans, no joining fee, pause anytime.</p></div>
+    <div class="step reveal"><h3>Start your journey</h3><p>Your coach builds a plan and checks in every month.</p></div>
+  </div>
+</div></section>
+
+<section id="plans"><div class="wrap">
+  <span class="tag">/ Memberships</span>
+  <h2 class="big">Pick your plan</h2>
+  <p class="lead">No joining fee. Pause for up to 7 days a month.</p>
+  <div class="switch" role="group" aria-label="Billing period"><button id="bm" class="on" aria-pressed="true">Monthly</button><button id="by" aria-pressed="false">Yearly <small>save 30%</small></button></div>
+  <div class="plans">
+    <div class="plan reveal"><h3>Basic</h3><div class="price">&#8377;<span data-m="1,200" data-y="10,000">1,200</span> <small class="per">/ month</small></div>
+      <ul><li>Gym floor access</li><li>2 group classes a week</li><li>Basic workout plan</li></ul>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20join%20the%20Basic%20plan">Choose Basic</a></div>
+    <div class="plan pick reveal"><span class="badge">Most popular</span><h3>Pro</h3><div class="price">&#8377;<span data-m="1,800" data-y="15,000">1,800</span> <small class="per">/ month</small></div>
+      <ul><li>Everything in Basic</li><li>Unlimited group classes</li><li>Custom plan from a coach</li><li>Monthly body check</li></ul>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20join%20the%20Pro%20plan">Choose Pro</a></div>
+    <div class="plan reveal"><h3>Elite</h3><div class="price">&#8377;<span data-m="3,000" data-y="25,000">3,000</span> <small class="per">/ month</small></div>
+      <ul><li>Everything in Pro</li><li>4 personal coaching sessions</li><li>Diet guidance</li><li>Priority class booking</li></ul>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20join%20the%20Elite%20plan">Choose Elite</a></div>
+  </div>
+</div></section>
+
+<section class="alt" id="trainers"><div class="wrap">
+  <span class="tag">/ Meet your coaches</span>
+  <h2 class="big">Certified trainers</h2>
+  <p class="lead">Real coaches who learn your name and watch your form.</p>
+  <!-- TRAINER PHOTOS: inside each .avatar, replace the initials with <img src="your-photo.jpg" alt="Trainer name" loading="lazy"> -->
+  <div class="trainers">
+    <article class="trainer reveal"><div class="avatar" aria-hidden="true">AM</div><h3>Arjun Mehta</h3><p class="cert">NSCA-CPT &middot; 8 years</p><p>Specialises in strength training and powerlifting basics.</p><div class="chips"><span>Strength</span><span>Powerlifting</span></div></article>
+    <article class="trainer reveal"><div class="avatar" aria-hidden="true">PN</div><h3>Priya Nair</h3><p class="cert">ACE Group Fitness &middot; 6 years</p><p>Specialises in HIIT, mobility and beginner programs.</p><div class="chips"><span>HIIT</span><span>Mobility</span></div></article>
+    <article class="trainer reveal"><div class="avatar" aria-hidden="true">RD</div><h3>Rahul Deshmukh</h3><p class="cert">ISSA Nutrition &middot; 5 years</p><p>Specialises in fat loss and simple diet planning.</p><div class="chips"><span>Fat loss</span><span>Nutrition</span></div></article>
+  </div>
+</div></section>
+
+<section id="bmi"><div class="wrap">
+  <span class="tag">/ Free tool</span>
+  <h2 class="big">BMI check</h2>
+  <p class="lead">Check your BMI and keep track over time. It is a rough guide, not a diagnosis.</p>
+  <div class="bmi">
+    <form id="bmiForm" novalidate>
+      <label for="ht">Height (cm)</label><input id="ht" type="number" min="100" max="250" required>
+      <label for="wt">Weight (kg)</label><input id="wt" type="number" min="25" max="300" required>
+      <button class="btn" type="submit">Calculate</button>
+    </form>
+    <div>
+      <div id="bmiOut" class="bmi-out" aria-live="polite">Enter your height and weight.</div>
+      <svg id="bmiChart" viewBox="0 0 300 90" role="img" aria-label="BMI history chart"></svg>
+      <ul id="bmiHist" class="hist"></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <span class="tag">/ Inside Forge Fitness</span>
+  <h2 class="big">Gallery</h2>
+  <p class="lead">Take a look at the floor. Tap any photo to enlarge.</p>
+  <div class="gallery"><button class="shot reveal" data-full="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?fm=jpg&q=70&w=1600&auto=format&fit=crop" aria-label="Open photo: Free weight area in a dark gym lit in red"><img src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Free weight area in a dark gym lit in red" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.pexels.com/photos/30147878/pexels-photo-30147878.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="Open photo: Rows of treadmills at twilight"><img src="https://images.pexels.com/photos/30147878/pexels-photo-30147878.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rows of treadmills at twilight" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.unsplash.com/photo-1620188467120-5042ed1eb5da?fm=jpg&q=70&w=1600&auto=format&fit=crop" aria-label="Open photo: Barbell and weight plates on the gym floor"><img src="https://images.unsplash.com/photo-1620188467120-5042ed1eb5da?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Barbell and weight plates on the gym floor" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.pexels.com/photos/6389506/pexels-photo-6389506.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="Open photo: Two members training on air bikes"><img src="https://images.pexels.com/photos/6389506/pexels-photo-6389506.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Two members training on air bikes" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.unsplash.com/photo-1761839258420-5c3e2f2e2a74?fm=jpg&q=70&w=1600&auto=format&fit=crop" aria-label="Open photo: Woman lifting a barbell"><img src="https://images.unsplash.com/photo-1761839258420-5c3e2f2e2a74?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Woman lifting a barbell" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.pexels.com/photos/38872716/pexels-photo-38872716.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="Open photo: Motivational wall and exercise equipment"><img src="https://images.pexels.com/photos/38872716/pexels-photo-38872716.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Motivational wall and exercise equipment" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.unsplash.com/photo-1646656130630-07af3a262a9b?fm=jpg&q=70&w=1600&auto=format&fit=crop" aria-label="Open photo: Row of strength machines"><img src="https://images.unsplash.com/photo-1646656130630-07af3a262a9b?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Row of strength machines" loading="lazy" width="600" height="450"></button><button class="shot reveal" data-full="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?fm=jpg&q=70&w=1600&auto=format&fit=crop" aria-label="Open photo: Red and silver dumbbell on a black surface"><img src="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Red and silver dumbbell on a black surface" loading="lazy" width="600" height="450"></button></div>
+</div></section>
+<dialog id="lb" aria-label="Photo viewer"><button class="lbx" id="lbClose" aria-label="Close">&times;</button><button class="lbn lbp" id="lbPrev" aria-label="Previous photo">&#8249;</button><img id="lbImg" alt=""><button class="lbn lbnx" id="lbNext" aria-label="Next photo">&#8250;</button></dialog>
+
+<section class="alt" id="reviews"><div class="wrap">
+  <span class="tag">/ Real results</span>
+  <h2 class="big">Member transformations</h2><br>
+  <!-- Sample testimonials: replace with real client feedback and photos (with permission) -->
+  <div class="quotes three">
+    <blockquote class="reveal"><div class="who"><div class="avatar sm" aria-hidden="true">RK</div><div><b>Rohan K.</b><br><small>IT professional &middot; Member 1 year</small></div></div>
+      <div class="chips"><span>&minus;6 kg</span><span>3 months</span><span>Pro plan</span></div>
+      <p>Lost 6 kg in 3 months and finally enjoy going to the gym.</p></blockquote>
+    <blockquote class="reveal"><div class="who"><div class="avatar sm" aria-hidden="true">SP</div><div><b>Sneha P.</b><br><small>Student &middot; Member 8 months</small></div></div>
+      <div class="chips"><span>First pull-up</span><span>5 months</span><span>Basic plan</span></div>
+      <p>The trainers actually correct your form. Best decision I made this year.</p></blockquote>
+    <blockquote class="reveal"><div class="who"><div class="avatar sm" aria-hidden="true">AD</div><div><b>Amit D.</b><br><small>Business owner &middot; Member 2 years</small></div></div>
+      <div class="chips"><span>+8 kg muscle</span><span>10 months</span><span>Elite plan</span></div>
+      <p>Coaching and monthly checks kept me on track even with a packed schedule.</p></blockquote>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <span class="tag">/ Questions</span>
+  <h2 class="big">FAQ</h2><br>
+  <details><summary>Can I try before I join?</summary><p>Yes. Book a full trial day free using the form at the top of the page.</p></details>
+  <details><summary>I'm a complete beginner. Is that okay?</summary><p>Absolutely. Every class is scaled and your coach will build a beginner plan for you.</p></details>
+  <details><summary>Do you offer personal training?</summary><p>Yes. One-on-one sessions come with a custom plan and monthly progress checks.</p></details>
+  <details><summary>Can I pause my membership?</summary><p>You can pause for up to 7 days a month at no charge.</p></details>
+</div></section>
+
+<section class="alt contact" id="contact"><div class="wrap">
+  <div>
+    <span class="tag">/ Visit us</span>
+    <h2 class="big">Find Forge Fitness</h2><br>
+    <dl>
+      <dt>Address</dt><dd>1st Floor, 100 Feet Road, Koramangala, Bengaluru 560034</dd>
+      <dt>Phone</dt><dd><a href="tel:+919876543210">Tap to call</a> &middot; <a target="_blank" rel="noopener" href="https://wa.me/919876543210">WhatsApp us</a></dd>
+      <dt>Hours</dt><dd>Mon to Sat 5 AM to 10 PM<br>Sun 7 AM to 12 PM</dd>
+    </dl>
+  </div>
+  <div class="map">
+    <h3>Get in touch</h3>
+    <form id="cf" novalidate>
+      <label for="cn">Name</label><input id="cn" autocomplete="name" required>
+      <label for="cp">Phone</label><input id="cp" type="tel" autocomplete="tel" required>
+      <label for="ce">Email</label><input id="ce" type="email" autocomplete="email" required>
+      <label for="cg">Fitness goal</label>
+      <select id="cg"><option>Build strength</option><option>Lose fat</option><option>Group HIIT</option><option>Personal coaching</option></select>
+      <button class="btn" type="submit">Send message</button>
+      <p id="cmsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+<div class="wrap" style="margin-top:36px"><iframe class="gmap" title="Forge Fitness location, Koramangala Bengaluru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=100+Feet+Road+Koramangala+Bengaluru+560034&output=embed"></iframe></div>
+</section>
+
+<footer class="site"><div class="wrap">
+  <p><strong>Forge Fitness</strong> &middot; 1st Floor, 100 Feet Road, Koramangala, Bengaluru 560034 &middot; <a target="_blank" rel="noopener" href="https://wa.me/919876543210">WhatsApp us</a></p>
+  <p>Train hard. Live strong.</p>
+  <!-- <p>Website by YOUR NAME, ApnoAI intern &middot; <a href="https://apnoai.com">apnoai.com</a></p> -->
+</div></footer>
+
+<a class="wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Forge%20Fitness"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.97 3.85Zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.18-.54.06-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.34-.76-1.83-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.54.12.16 1.73 2.64 4.2 3.7.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28Z"/></svg></a>
+<script>
+  var btn=document.getElementById("menu-btn"),menu=document.getElementById("menu");
+  btn.addEventListener("click",function(){var o=menu.classList.toggle("open");btn.setAttribute("aria-expanded",o)});
+  menu.addEventListener("click",function(e){if(e.target.tagName==="A"){menu.classList.remove("open");btn.setAttribute("aria-expanded",false)}});
+
+  function sendTrial(e){
+    e.preventDefault();
+    var t="Hi, I want to book the free trial day. Name: "+n.value+", Phone: "+p.value+", Goal: "+g.value+", Date: "+d.value;
+    window.open("https://wa.me/919876543210?text="+encodeURIComponent(t),"_blank");
+    return false;
+  }
+
+  document.querySelectorAll(".num").forEach(function(el){
+    var to=+el.dataset.to,cur=0,step=Math.ceil(to/60);
+    var run=function(){var t=setInterval(function(){cur+=step;if(cur>=to){cur=to;clearInterval(t)}el.textContent=cur.toLocaleString("en-IN")+"+"},25)};
+    if("IntersectionObserver" in window){new IntersectionObserver(function(en,ob){en.forEach(function(x){if(x.isIntersecting){run();ob.disconnect()}})}).observe(el)}else{el.textContent=to+"+"}
+  });
+
+  /* theme */
+  var root=document.documentElement,tb=document.getElementById("theme");
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+  function setTheme(t){root.setAttribute("data-theme",t);tb.innerHTML=t==="light"?"&#9790;":"&#9788;";tb.setAttribute("aria-label",t==="light"?"Switch to dark mode":"Switch to light mode");store("theme",t)}
+  setTheme(store("theme")||"dark");
+  tb.onclick=function(){setTheme(root.getAttribute("data-theme")==="light"?"dark":"light")};
+
+  /* pricing toggle */
+  var bm=document.getElementById("bm"),by=document.getElementById("by");
+  function period(y){bm.classList.toggle("on",!y);by.classList.toggle("on",y);bm.setAttribute("aria-pressed",!y);by.setAttribute("aria-pressed",y);
+    document.querySelectorAll("[data-m]").forEach(function(e){e.textContent=y?e.dataset.y:e.dataset.m});
+    document.querySelectorAll(".per").forEach(function(e){e.textContent=y?"/ year":"/ month"})}
+  bm.onclick=function(){period(false)};by.onclick=function(){period(true)};
+
+  /* scroll reveal */
+  var rv=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.15});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add("in")})}
+
+  /* BMI with history */
+  var hist=[];try{hist=JSON.parse(store("bmi")||"[]")}catch(e){}
+  function cat(b){return b<18.5?["Underweight","#3498db","Add strength training and eat a little more protein and calories."]:b<25?["Healthy range","#2ecc71","Great. Keep a mix of strength and cardio, 3 to 4 days a week."]:b<30?["Overweight","#f39c12","Start with HIIT twice a week, daily walks and a small calorie deficit."]:["Obese range","#e74c3c","Begin with low-impact cardio and coach-guided strength. Check with a doctor too."]}
+  function draw(){
+    var h=document.getElementById("bmiHist"),c=document.getElementById("bmiChart");h.innerHTML="";c.innerHTML="";
+    hist.forEach(function(r){var l=document.createElement("li");l.textContent=r.d+": BMI "+r.b+" ("+cat(r.b)[0]+")";h.appendChild(l)});
+    var w=300/Math.max(hist.length,1);
+    hist.forEach(function(r,i){var ht=Math.min(80,(r.b/40)*80);var e=document.createElementNS("http://www.w3.org/2000/svg","rect");
+      e.setAttribute("x",i*w+6);e.setAttribute("width",Math.max(w-12,8));e.setAttribute("y",85-ht);e.setAttribute("height",ht);e.setAttribute("rx",4);e.setAttribute("fill",cat(r.b)[1]);c.appendChild(e)})}
+  draw();
+  document.getElementById("bmiForm").addEventListener("submit",function(e){
+    e.preventDefault();var h=document.getElementById("ht"),w=document.getElementById("wt"),out=document.getElementById("bmiOut");
+    var ok=h.value>=100&&h.value<=250&&w.value>=25&&w.value<=300;h.classList.toggle("bad",!(h.value>=100&&h.value<=250));w.classList.toggle("bad",!(w.value>=25&&w.value<=300));
+    if(!ok){out.textContent="Please enter a height of 100-250 cm and a weight of 25-300 kg.";return}
+    var b=+(w.value/Math.pow(h.value/100,2)).toFixed(1),c=cat(b);
+    out.style.borderColor=c[1];out.innerHTML="<b style='color:"+c[1]+"'>"+b+"</b>"+c[0]+". "+c[2];
+    hist.push({b:b,d:new Date().toLocaleDateString("en-IN",{day:"numeric",month:"short"})});hist=hist.slice(-6);store("bmi",JSON.stringify(hist));draw()});
+
+  /* contact form with validation */
+  var FORM_URL=""; /* paste your Formspree URL here, e.g. https://formspree.io/f/xxxx */
+  document.getElementById("cf").addEventListener("submit",function(e){
+    e.preventDefault();var n=cn,ph=cp,em=ce,m=document.getElementById("cmsg"),bad=[];
+    if(n.value.trim().length<2)bad.push(n);
+    if(!/^[+0-9 ()-]{10,15}$/.test(ph.value.trim()))bad.push(ph);
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim()))bad.push(em);
+    [n,ph,em].forEach(function(f){f.classList.toggle("bad",bad.indexOf(f)>-1)});
+    if(bad.length){m.className="err";m.textContent="Please fix the highlighted fields.";bad[0].focus();return}
+    var data={name:n.value,phone:ph.value,email:em.value,goal:cg.value};
+    if(!FORM_URL){window.open("https://wa.me/919876543210?text="+encodeURIComponent("Hi Forge Fitness, I am "+data.name+" ("+data.phone+", "+data.email+"). My goal: "+data.goal),"_blank");m.className="ok";m.textContent="Thanks "+n.value.split(" ")[0]+"! Press send in WhatsApp to confirm.";e.target.reset();return}
+    fetch(FORM_URL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)})
+      .then(function(r){if(!r.ok)throw 0;m.className="ok";m.textContent="Thanks! We will contact you soon.";e.target.reset()})
+      .catch(function(){m.className="err";m.textContent="Something went wrong. Please try again or message us on WhatsApp."})});
+
+  /* hero video: only on wide screens, no reduced motion, no data saver */
+  (function(){var v=document.getElementById("heroVideo");if(!v)return;
+    var c=navigator.connection||{};
+    if(window.matchMedia("(min-width:861px)").matches&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&!c.saveData){
+      v.src=v.dataset.src;var pl=v.play();if(pl&&pl.catch)pl.catch(function(){})}})();
+
+  /* gallery lightbox */
+  (function(){var lb=document.getElementById("lb"),im=document.getElementById("lbImg"),sh=[].slice.call(document.querySelectorAll(".shot")),cur=0;
+    function show(i){cur=(i+sh.length)%sh.length;im.src=sh[cur].dataset.full;im.alt=sh[cur].querySelector("img").alt}
+    sh.forEach(function(b,i){b.addEventListener("click",function(){show(i);if(lb.showModal)lb.showModal();else lb.setAttribute("open","")})});
+    document.getElementById("lbClose").onclick=function(){lb.close()};
+    document.getElementById("lbPrev").onclick=function(){show(cur-1)};
+    document.getElementById("lbNext").onclick=function(){show(cur+1)};
+    lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+    document.addEventListener("keydown",function(e){if(!lb.open)return;if(e.key==="ArrowLeft")show(cur-1);if(e.key==="ArrowRight")show(cur+1)})})();
+</script>
+</body>
+</html>
